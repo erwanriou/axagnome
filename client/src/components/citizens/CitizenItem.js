@@ -5,7 +5,7 @@ class CitizenItem extends React.Component {
   render() {
     const { gnome } = this.props
     return (
-      <Link to={`/citizen/${gnome.id}`}className='citizenitem'>
+      <Link to={`/citizen/${gnome.id}`} className='citizenitem'>
         <div className="citizendata">
           <h1>{gnome.name}</h1>
           <h3>Age: {gnome.age} years</h3>

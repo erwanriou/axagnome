@@ -8,7 +8,7 @@ class Nav extends React.Component {
         <div className="container">
           <nav>
             <div className="title">
-              <h1>AXACITIZENAPP</h1>
+              <h1><Link to='/'>AXACITIZENAPP</Link></h1>
             </div>
             <div className="functions">
               <div className="filters">
