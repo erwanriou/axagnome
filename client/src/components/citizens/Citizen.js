@@ -31,11 +31,13 @@ class Citizen extends React.Component {
             </div>
             <div className="row">
               <div className="professions">
+                <h3>Professions</h3>
                 { gnomes[id].professions.map( profession => (
                   <p>{profession}</p>
                 )) }
               </div>
               <div className="friends">
+                <h3>Friends</h3>
                 { gnomes[id].friends.length === 0
                     ? <p>{gnomes[id].name} doesn't have any friends</p>
                     : gnomes[id].friends.map( friend => (
