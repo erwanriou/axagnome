@@ -1,5 +1,6 @@
 /* NAVBAR */
 .nav {
+  top: 0;
   position: fixed;
   z-index: 1000;
   width: 100%;
@@ -18,14 +19,12 @@
   justify-content: space-between;
 }
 .nav nav .browse {
-  margin-left: 4rem;
-}
-.nav nav .filters {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
-.nav nav .filters h2{
-  margin: 0 1rem;
+.nav nav .browse h2 {
+  margin-left: 2rem;
 }
 .nav a {
   color: white;

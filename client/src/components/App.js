@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 
 //Import API
 import { getGnome } from '../utils/api'
@@ -24,7 +24,11 @@ class App extends React.Component {
     this.state = {
       gnomes: null,
       errors: {},
+      query: '',
     }
+
+  this.handleQueryInput = this.handleQueryInput.bind(this)
+  this.displayResult = this.displayResult.bind(this)
   }
 
   async componentDidMount() {
@@ -32,23 +36,41 @@ class App extends React.Component {
     this.setState({ gnomes: data.Brastlewark })
   }
 
+  async displayResult() {
+    const data = await getGnome()
+    const gnome = data.Brastlewark.filter( gnome => gnome.age.toString() === this.state.query )
+    this.setState({
+      gnomes: gnome
+    })
+  }
+
+  handleQueryInput(query) {
+    this.setState({
+      query: query
+    })
+  }
+
   render() {
-    const { gnomes, errors } = this.state
+    const { gnomes, errors, query } = this.state
     return (
       <div className='main'>
-        <Nav />
+        <Nav
+          gnomes={gnomes}
+          query={query}
+          handleQueryInput={this.handleQueryInput}
+          displayResult={this.displayResult}/>
         <Route exact path='/' render={() => (
           gnomes === null
             ? <Spinner />
-            : <CitizenList gnomes={gnomes}/>
+            : <CitizenList gnomes={gnomes} />
         )} />
         <Route exact path='/citizen/:id' render={(props) => (
           gnomes === null
             ? <Spinner />
-            : <Citizen {...props} gnomes={gnomes}/>
+            : <Citizen {...props} gnomes={gnomes} />
         )} />
       </div>
-    );
+    )
   }
 }
 

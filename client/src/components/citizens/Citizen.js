@@ -11,7 +11,7 @@ class Citizen extends React.Component {
         <div className="container">
           <div className="header">
             <div className="goback">
-              <Link to='/'><i class="fas fa-arrow-left"></i><span>Go Back</span></Link>
+              <Link to='/'><i className="fas fa-arrow-left"></i><span>Go Back</span></Link>
             </div>
             <div className="title">
               <h1>{gnomes[id].name}</h1>

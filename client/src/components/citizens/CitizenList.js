@@ -2,6 +2,7 @@ import React from 'react'
 import CitizenItem from './CitizenItem'
 
 class CitizenList extends React.Component {
+
   render() {
     return (
       <div className='citizens'>

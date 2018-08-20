@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 
 class Nav extends React.Component {
+
   render() {
     return (
       <div className='nav'>
@@ -11,14 +12,13 @@ class Nav extends React.Component {
               <h1><Link to='/'>AXACITIZENAPP</Link></h1>
             </div>
             <div className="functions">
-              <div className="filters">
-                <h2>Age</h2>
-                <h2>Weight</h2>
-                <h2>Heigth</h2>
-                <h2>Professions</h2>
-              </div>
               <div className="browse">
-                <h2>Research</h2>
+                <input
+                  onChange={(e) => this.props.handleQueryInput(e.target.value)}
+                  value={this.props.query}
+                  type="text"
+                  placeholder='Filter by age'/>
+                <h2 onClick={this.props.displayResult}> Research</h2>
               </div>
             </div>
           </nav>
