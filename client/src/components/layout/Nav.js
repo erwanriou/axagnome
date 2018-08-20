@@ -14,8 +14,8 @@ class Nav extends React.Component {
               <div className="filters">
                 <h2>Age</h2>
                 <h2>Weight</h2>
-                <h2>heigth</h2>
-                <h2>professions</h2>
+                <h2>Heigth</h2>
+                <h2>Professions</h2>
               </div>
               <div className="browse">
                 <h2>Research</h2>

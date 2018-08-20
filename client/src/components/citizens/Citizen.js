@@ -11,31 +11,38 @@ class Citizen extends React.Component {
         <div className="container">
           <div className="header">
             <div className="goback">
-              <Link to='/'>Go Back</Link>
+              <Link to='/'><i class="fas fa-arrow-left"></i><span>Go Back</span></Link>
             </div>
             <div className="title">
-              {gnomes[id].name}
+              <h1>{gnomes[id].name}</h1>
             </div>
           </div>
           <div className="content">
-            <div className="image">
-              <img src={gnomes[id].thumbnail} alt={gnomes[id].name}/>
+            <div className="row">
+              <div className="image">
+                <img src={gnomes[id].thumbnail} alt={gnomes[id].name}/>
+              </div>
+              <div className="data">
+                <p><strong>Age: </strong>{gnomes[id].age}</p>
+                <p><strong>weight: </strong>{gnomes[id].weight}</p>
+                <p><strong>height: </strong>{gnomes[id].height}</p>
+                <p><strong>hair color: </strong>{gnomes[id].hair_color}</p>
+              </div>
             </div>
-            <div className="data">
-              <p>{gnomes[id].age}</p>
-              <p>{gnomes[id].weight}</p>
-              <p>{gnomes[id].height}</p>
-              <p>{gnomes[id].hair_color}</p>
-            </div>
-            <div className="professions">
-              { gnomes[id].professions.map( profession => (
-                <p>{profession}</p>
-              )) }
-            </div>
-            <div className="friends">
-              { gnomes[id].friends.map( friend => (
-                <p>{friend}</p>
-              )) }
+            <div className="row">
+              <div className="professions">
+                { gnomes[id].professions.map( profession => (
+                  <p>{profession}</p>
+                )) }
+              </div>
+              <div className="friends">
+                { gnomes[id].friends.length === 0
+                    ? <p>{gnomes[id].name} doesn't have any friends</p>
+                    : gnomes[id].friends.map( friend => (
+                        <p>{friend}</p>
+                      ))
+                }
+              </div>
             </div>
           </div>
         </div>

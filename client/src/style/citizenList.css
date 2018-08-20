@@ -1,0 +1,34 @@
+/* CITIZENS */
+.citizens {
+  display: flex;
+  flex-wrap: wrap;
+}
+.citizenitem {
+  position: relative;
+  overflow: hidden;
+  width: 20%;
+  height: 20rem;
+  cursor: pointer;
+}
+.citizenitem:hover .citizenimage {
+    opacity: 0.8;
+}
+.citizenitem .citizenimage {
+  opacity: 0.4;
+}
+.citizenitem .citizendata {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.citizenitem .citizendata h1 {
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+.citizenitem .citizendata h3 {
+  font-size: 1rem;
+}

@@ -19,114 +19,12 @@ body {
   display: 'block';
   width: 200px;
 }
-h1, h2 {
-  font-weight: 300;
+h1 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-weight: bold;
 }
 a {
   color: black;
-}
-/* NAVBAR */
-.nav {
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
-  box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
-  background-color: #343a40;
-}
-.nav nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-}
-.nav nav .functions {
-  display: flex;
-  justify-content: space-between;
-}
-.nav nav .browse {
-  margin-left: 4rem;
-}
-.nav nav .filters {
-  display: flex;
-  align-items: center;
-}
-.nav nav .filters h2{
-  margin: 0 1rem;
-}
-.nav a {
-  color: white;
-  text-decoration: none;
-}
-/* CITIZENS */
-.citizens {
-  display: flex;
-  flex-wrap: wrap;
-}
-.citizenitem {
-  position: relative;
-  overflow: hidden;
-  width: 20%;
-  height: 20rem;
-  cursor: pointer;
-}
-.citizenitem:hover .citizenimage {
-    opacity: 0.8;
-}
-.citizenitem .citizenimage {
-  opacity: 0.4;
-}
-.citizenitem .citizendata {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-.citizenitem .citizendata h1 {
-  font-weight: 300;
-}
-/* CITIZEN DETAIL */
-.citizen {
-  padding-top: 7rem;
-}
-
-/* RESPONSIVE */
-@media only screen and (max-width: 1500px) and (min-width: 1300px){
-  .citizenitem h1 {
-    font-size: 1.2rem;
-  }
-}
-@media only screen and (max-width: 1300px) and (min-width: 1000px){
-  .citizenitem {
-    width: 25%;
-  }
-  .citizenitem h1 {
-    font-size: 1rem;
-  }
-}
-@media only screen and (max-width: 1000px) and (min-width: 700px) {
-  .citizenitem {
-    width: 33.3%;
-  }
-  .citizenitem h1 {
-    font-size: 1rem;
-  }
-}
-@media only screen and (max-width: 700px) and (min-width: 400px) {
-  .citizenitem {
-    width: 50%;
-  }
-  .citizenitem h1 {
-    font-size: 1rem;
-  }
-}
-@media only screen and (max-width: 400px) {
-  .citizenitem {
-    width: 100%;
-  }
-  .citizenitem h1 {
-    font-size: 1rem;
-  }
 }

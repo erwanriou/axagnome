@@ -11,7 +11,12 @@ import CitizenList from './citizens/CitizenList'
 import Citizen from './citizens/Citizen'
 
 //Import Styling
+import '../style/reset.css'
 import '../style/style.css'
+import '../style/citizen.css'
+import '../style/citizenList.css'
+import '../style/nav.css'
+import '../style/responsive.css'
 
 class App extends React.Component {
   constructor(props) {

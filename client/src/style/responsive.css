@@ -1,0 +1,43 @@
+/* RESPONSIVE */
+@media only screen and (max-width: 1200px) {
+  .container  {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1500px) and (min-width: 1300px){
+  .citizenitem h1 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 1300px) and (min-width: 1000px){
+  .citizenitem {
+    width: 25%;
+  }
+  .citizenitem h1 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 1000px) and (min-width: 700px) {
+  .citizenitem {
+    width: 33.3%;
+  }
+  .citizenitem h1 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 700px) and (min-width: 400px) {
+  .citizenitem {
+    width: 50%;
+  }
+  .citizenitem h1 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .citizenitem {
+    width: 100%;
+  }
+  .citizenitem h1 {
+    font-size: 1rem;
+  }
+}
