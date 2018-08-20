@@ -1,10 +1,12 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
 
 //Import API
 import { getGnome } from '../utils/api'
 
 //Import Needed Components
 import Spinner from './common/Spinner'
+import Nav from './layout/Nav'
 import CitizenList from './citizens/CitizenList'
 
 //Import Styling
@@ -28,10 +30,12 @@ class App extends React.Component {
     const { gnomes, errors } = this.state
     return (
       <div className='main'>
-        { gnomes === null
-          ? <Spinner />
-          : <CitizenList gnomes={gnomes}/>
-        }
+        <Nav />
+        <Route exact path='/' render={() => (
+          gnomes === null
+            ? <Spinner />
+            : <CitizenList gnomes={gnomes}/>
+        )} />
       </div>
     );
   }

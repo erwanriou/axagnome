@@ -5,14 +5,50 @@ body {
   font-weight: 100;
   margin: 0 auto;
 }
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+h1, h2 {
+  font-weight: 300;
+}
+
+/* NAVBAR */
+.nav {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
+  background-color: #343a40;
+}
+.nav nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.nav nav .functions {
+  display: flex;
+  justify-content: space-between;
+}
+.nav nav .browse {
+  margin-left: 4rem;
+}
+.nav nav .filters {
+  display: flex;
+  align-items: center;
+}
+.nav nav .filters h2{
+  margin: 0 1rem;
+}
+
+
 
 /* CITIZENS */
-
 .citizens {
   display: flex;
   flex-wrap: wrap;
 }
-
 .citizenitem {
   position: relative;
   overflow: hidden;
@@ -20,15 +56,12 @@ body {
   height: 20rem;
   cursor: pointer;
 }
-
 .citizenitem:hover .citizenimage {
     opacity: 0.8;
 }
-
 .citizenitem .citizenimage {
   opacity: 0.4;
 }
-
 .citizenitem .citizendata {
   position: absolute;
   width: 100%;
@@ -38,7 +71,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
 .citizenitem .citizendata h1 {
   font-weight: 300;
 }
