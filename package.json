@@ -1,0 +1,11 @@
+{
+  "name": "axagome",
+  "version": "1.0.0",
+  "description": "a test created by axa to determine hability to do react applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erwan Riou",
+  "license": "ISC"
+}
