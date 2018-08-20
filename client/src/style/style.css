@@ -9,10 +9,22 @@ body {
   margin: 0 auto;
   width: 1200px;
 }
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7rem;
+}
+.spinner img {
+  display: 'block';
+  width: 200px;
+}
 h1, h2 {
   font-weight: 300;
 }
-
+a {
+  color: black;
+}
 /* NAVBAR */
 .nav {
   position: fixed;

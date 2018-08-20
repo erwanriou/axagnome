@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class CitizenItem extends React.Component {
   render() {
     const { gnome } = this.props
     return (
-      <div className='citizenitem'>
+      <Link to={`/citizen/${gnome.id}`}className='citizenitem'>
         <div className="citizendata">
           <h1>{gnome.name}</h1>
           <h3>Age: {gnome.age} years</h3>
@@ -12,7 +13,7 @@ class CitizenItem extends React.Component {
         <div className="citizenimage">
           <img src={gnome.thumbnail} alt={gnome.name}/>
         </div>
-      </div>
+      </Link>
     );
   }
 }

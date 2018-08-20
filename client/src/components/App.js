@@ -8,6 +8,7 @@ import { getGnome } from '../utils/api'
 import Spinner from './common/Spinner'
 import Nav from './layout/Nav'
 import CitizenList from './citizens/CitizenList'
+import Citizen from './citizens/Citizen'
 
 //Import Styling
 import '../style/style.css'
@@ -35,6 +36,11 @@ class App extends React.Component {
           gnomes === null
             ? <Spinner />
             : <CitizenList gnomes={gnomes}/>
+        )} />
+        <Route exact path='/citizen/:id' render={(props) => (
+          gnomes === null
+            ? <Spinner />
+            : <Citizen {...props} gnomes={gnomes}/>
         )} />
       </div>
     );
