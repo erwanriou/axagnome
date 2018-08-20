@@ -1,12 +1,12 @@
 import React from 'react'
-import Citizen from './Citizen'
+import CitizenItem from './CitizenItem'
 
 class CitizenList extends React.Component {
   render() {
     return (
-      <div>
+      <div className='citizens'>
         {this.props.gnomes.map(gnome =>(
-          <Citizen key={gnome.id} gnome={gnome} />
+          <CitizenItem key={gnome.id} gnome={gnome} />
         ))}
       </div>
     );

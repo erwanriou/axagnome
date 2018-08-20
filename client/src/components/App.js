@@ -5,10 +5,10 @@ import { getGnome } from '../utils/api'
 
 //Import Needed Components
 import Spinner from './common/Spinner'
-import CitizenList from './CitizenList'
+import CitizenList from './citizens/CitizenList'
 
-
-
+//Import Styling
+import '../style/style.css'
 
 class App extends React.Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class App extends React.Component {
   render() {
     const { gnomes, errors } = this.state
     return (
-      <div>
+      <div className='main'>
         { gnomes === null
           ? <Spinner />
           : <CitizenList gnomes={gnomes}/>
